@@ -1,9 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.stack;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntStack {
 
 	public static final int NUMBERS_MAX_SIZE = 12;
-	public static final int IF_EMPTY = -1;
 	public static final int INITIAL_RHYMER_INDEX = -1;
 
 	private final int[] numbers = new int[NUMBERS_MAX_SIZE];
@@ -14,27 +13,32 @@ public class IntArrayStack {
 
 	private int total = INITIAL_RHYMER_INDEX;
 
-	public void countIn(int in) {
+	@Override
+	public void push(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	@Override
+	public boolean isEmpty() {
 		return total == INITIAL_RHYMER_INDEX;
 	}
 
+	@Override
 	public boolean isFull() {
 		return total == NUMBERS_MAX_SIZE - 1;
 	}
 
-	protected int peekaboo() {
-		if (callCheck())
+	@Override
+	public int top() {
+		if (isEmpty())
 			return IF_EMPTY;
 		return numbers[total];
 	}
 
-	public int countOut() {
-		if (callCheck())
+	@Override
+	public int pop() {
+		if (isEmpty())
 			return IF_EMPTY;
 		return numbers[total--];
 	}

@@ -1,11 +1,10 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 
-	public static final int IF_EMPTY = -1;
 	private Node last;
-	private int i;
 
+	@Override
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -16,20 +15,24 @@ public class IntLinkedList {
 		}
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int top() {
 		if (isEmpty())
 			return IF_EMPTY;
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return IF_EMPTY;
