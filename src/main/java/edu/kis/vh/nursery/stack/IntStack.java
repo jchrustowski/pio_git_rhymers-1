@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stack;
 
 public interface IntStack {
-	int IF_EMPTY = -1;
+	int IF_EMPTY = 0;
 
 	void push(int i);
 
