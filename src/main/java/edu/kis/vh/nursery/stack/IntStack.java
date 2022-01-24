@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 public interface IntStack {
 	int IF_EMPTY = -1;

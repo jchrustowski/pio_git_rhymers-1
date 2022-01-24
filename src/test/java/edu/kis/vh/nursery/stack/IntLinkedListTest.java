@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntArrayStack;
-import edu.kis.vh.nursery.list.IntStack;
+import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.IntStack;
 
 /**
  * This class specifies the basic Rhymer.
