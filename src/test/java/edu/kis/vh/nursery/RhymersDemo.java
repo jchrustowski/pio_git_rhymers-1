@@ -1,14 +1,27 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.factory.ArrayStackRhymersFactory;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.ListRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
 
 	public static void main(String[] args) {
 		RhymersFactory factory = new DefaultRhymersFactory();
+		RhymersFactory stackFactory = new ArrayStackRhymersFactory();
+		RhymersFactory listFactory = new ListRhymersFactory();
 
+		System.out.println("Test DefaultRhymersFactory");
 		testRhymers(factory);
+
+		System.out.println();
+		System.out.println("Test ArrayStackRhymersFactory");
+		testRhymers(stackFactory);
+
+		System.out.println();
+		System.out.println("Test ListRhymersFactory");
+		testRhymers(listFactory);
 
 	}
 	//TODO from this method can be extracted some sub-functions to simplify code.
